@@ -1,0 +1,265 @@
+
+@keyframes example {
+    0%   {background-color: #A7EFE9;}
+    25%  {background-color: #7FDFD4;}
+    50%  {background-color: #FBE1B6;}
+    100% {background-color: #FBAC91;}
+}
+
+@keyframes changecolor {
+    0%   {background-color: red;}
+    25%  {background-color: green;}
+    50%  {background-color: white;}
+    100% {background-color: blue;}
+}
+
+@keyframes zigzag {
+    0%   {background: #EDFEAD; left: 800px; top: 80px;}
+    25%  {background: #FFBD39; left: 200px; top: 80px;}
+    50%  {background: #DE3C3C; left: 200px; top: 400px;}
+    75%  {background: #FFE6EB; left: 1400px; top: 400px;}
+    100% {background: #360982; left: 0px; top: 0px;}
+}
+
+@keyframes moving {
+    0%   {background: #F27370; left: 40px; top: 300px;}
+    25%  {background: #EDE862; left: 700px; top: 30px;}
+    50%  {background: blue; left: 900px; top: 75px;}
+    75%  {background: #ABEDD8; left: 1400px; top: 400px;}
+    100% {background: #7FDFD4; left: 45px; top: 0px;}
+}
+
+@keyframes movings {
+    0%   {background: #FAA9E0; left: 70px; top: 150px;}
+    30%  {background: yellow; left: 700px; top: 30px;}
+    40%  {background: #EAA3FC; left: 900px; top: 600px;}
+    50%  {background: blue; left: 750px; top: 75px;}
+    65%  {background: #F12B6B; left: 900px; top: 300px;}
+    75%  {background: #83FFE6; left: 1400px; top: 70px;}
+    100% {background: red; left: 45px; top: 0px;}
+}
+
+@keyframes movingss {
+    5%   {background: #EC7700; left: 900px; top: 300px;}
+    40%  {background: yellow; left: 700px; top: 90px;}
+    50%  {background: #51ADCF; left: 30px; top: 30px;}
+    75%  {background: #3A0088; left: 1400px; top: 600px;}
+    100% {background: #F9CE00; left: 45px; top: 90px;}
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: #FBAC91;
+    border-radius: 100%;
+    left: 200px; top: 80px;
+  }
+  25% {
+  	left: 600px; top: 400px;
+  	transform: scale(1.5)}
+  50% {
+    background-color: #FBE1B6;
+    left: 1000px; top: 150px;
+    transform: scale(.3)
+  }
+  75% {left: 300px; top: 800px;}
+  100% {
+    transform: scale(3);
+    background-color: #A7EFE9;
+    border-radius: 100%;
+    left: 600px; top: 150px;
+  }
+}
+
+
+/*--------------------------------------------------------------------------
+^^^animations^^^
+--------------------------------------------------------------------------*/
+
+
+.wrapper {
+	width: 1440px;
+	height: 1050px;
+	position: relative;
+	display: block;
+}
+
+
+#canvas {
+    width: 100%;
+    height:100%;
+    background-color: #FDC7FF;
+    animation-name: example;
+    animation-duration: 8s;
+   	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+    margin: 0px;
+    z-index: -1;
+}
+
+.player {
+	display: none;
+}
+
+.bigcircle {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    transition: height .6s;
+    z-index: 1;
+    position: absolute;
+  	top: 80px;
+  	left: 200px;
+  	box-shadow: 0px 0px 50px white;
+  	height: 250px;
+	width: 250px;
+	margin: 0 auto;
+	background-color: red;
+	animation-name: stretch;
+	animation-duration: 40s; 
+	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.bigcircle:hover {
+    height: 300px;
+}
+
+.block2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #0F4137;
+    transition: width 1s;
+    z-index: 1;
+    position: absolute;
+  	box-shadow: 0px 0px 50px blue;
+  	animation: zigzag 20s 2;
+    animation-direction: alternate;
+    animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.block2:hover {
+    width: 300px;
+}
+
+/*.block3 {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    position: absolute;
+  	top: 400px;
+  	right: 800px;
+    transition: width 6s, height 6s, transform 6s;
+    box-shadow: 0px 0px 40px red;
+    animation-name: changecolor;
+    animation-duration: 15s;
+   	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.block3:hover {
+    height: 700px;
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}*/
+
+.block4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    transition: height 1s;
+    z-index: 1;
+    position: absolute;
+  	box-shadow: 0px 0px 30px #DBEDF3;
+  	animation: moving 50s 6;
+    animation-direction: alternate;
+    animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.block4:hover {
+    height: 700px;
+}
+
+
+.block5 {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    transition: width 1s;
+    z-index: 1;
+    position: absolute;
+  	box-shadow: 0px 0px 50px white;
+  	animation: movings 20s 2;
+    animation-direction: alternate;
+    animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.block5:hover {
+    width: 300px;
+}
+
+.block6 {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    transition: width 1s;
+    z-index: 1;
+    position: absolute;
+  	box-shadow: 0px 0px 50px white;
+  	animation: movingss 40s 2;
+    animation-direction: alternate;
+    animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+.block6:hover {
+    width: 300px;
+}
+
+.sound-wave-img {
+    z-index: 0;
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+body {
+    margin: 0px;
+/*    overflow: hidden;*/
+    height: 100vh;
+}
+
+
