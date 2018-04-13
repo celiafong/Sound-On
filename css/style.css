@@ -97,7 +97,6 @@
 	animation-iteration-count: infinite;
 	animation-fill-mode: none;
 	animation-play-state: running;
-    margin: 0px;
     z-index: -1;
 }
 
